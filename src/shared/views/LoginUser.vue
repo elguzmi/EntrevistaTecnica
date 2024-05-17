@@ -174,7 +174,7 @@ export default {
       </div>
       <form @submit="registerUser($event)">
         <div class="flex flex-col text-left">
-          <label for="username">Nombre</label>
+          <label for="username">Name</label>
           <InputText
             class="flex items-center w-full px-5 py-4 mr-2 text-sm font-medium outline-none focus:bg-grey-400 mb-7 placeholder:text-grey-700 bg-grey-200 text-dark-grey-900 rounded-2xl"
             id="username"
@@ -210,11 +210,18 @@ export default {
           />
           <!-- <small id="username-help">Enter your username to reset your password.</small> -->
         </div>
-        <div class="mt-3">
+        <div class="mt-3 flex justify-between sm:flex-col md:flex-col gap-3">
           <input
-            class="px-2 py-5 mb-5 text-sm font-bold leading-none text-white transition duration-300 md:w-full rounded-2xl hover:bg-purple-blue-600 focus:ring-4 focus:ring-purple-blue-100 bg-color_yellow hover:cursor-pointer"
+            class="w-full px-2 py-5 mb-5 text-md font-bold leading-none text-white transition duration-300 md:w-full rounded-2xl hover:bg-purple-blue-600 focus:ring-4 focus:ring-purple-blue-100 bg-color_yellow hover:cursor-pointer"
             type="submit"
-            value="Registrarse"
+            value="Register User"
+          />
+
+          <input
+            class="w-full py-5 mb-5 text-md font-bold leading-none text-white transition duration-300 md:w-full rounded-2xl hover:bg-purple-blue-600 focus:ring-4 focus:ring-purple-blue-100 bg-color_blue"
+            type="button"
+            value="Log in"
+            @click="mode = 1"
           />
         </div>
       </form>
