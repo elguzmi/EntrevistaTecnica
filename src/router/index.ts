@@ -1,19 +1,16 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '@/shared/views/HomeView.vue'
+import LoginUser from '@/shared/views/LoginUser.vue'
+import { newsRouter } from '@/news/router/index'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
       path: '/',
-      name: 'inicio',
-      component: HomeView
+      name: 'login',
+      component: LoginUser
     },
-    {
-      path: '/news',
-      name: 'news',
-      component: () => import('../news/views/NewsView.vue')
-    }
+    newsRouter
   ]
 })
 

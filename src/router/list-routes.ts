@@ -7,5 +7,4 @@ export interface RouterLinks {
 export const routerLinks: RouterLinks[] = [
   { path: '/', name: 'inicio', title: 'Inicio' },
   { path: '/news', name: 'news', title: 'News' }
-  // {path:'/' , name:'home' , title :'home' },
 ]
